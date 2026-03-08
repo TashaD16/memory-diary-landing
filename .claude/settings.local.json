@@ -6,7 +6,12 @@
       "Bash(tasklist:*)",
       "Bash(cmd:*)",
       "Bash(git add:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "WebFetch(domain:syntx.ai)",
+      "WebSearch",
+      "WebFetch(domain:expertbeacon.com)",
+      "Bash(rm:*)",
+      "WebFetch(domain:docs.syntx.ai)"
     ]
   }
 }
