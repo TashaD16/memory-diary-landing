@@ -26,9 +26,6 @@ export default function Home() {
             <Link href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</Link>
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
-              <Link href="#pricing">Войти</Link>
-            </Button>
             <Button size="sm" className="bg-amber-800 hover:bg-amber-700 text-amber-50 border-0" asChild>
               <Link href="#pricing">Начать бесплатно</Link>
             </Button>
