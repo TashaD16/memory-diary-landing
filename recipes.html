@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты для семьи — Memory Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/recipes.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌳 Memory Diary</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#features">Возможности</a></li>
+                <li><a href="index.html#pricing">Цены</a></li>
+                <li><a href="recipes.html" style="color:var(--primary-blue);font-weight:700">🍽 Рецепты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>🍽 Рецепты для семьи</h1>
+        <p>Популярные блюда со всего мира и персональные рецепты от AI — для вкусного семейного стола</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs-wrapper">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="randomizer">
+                🎲 Рандомайзер
+            </button>
+            <button class="tab-btn" data-tab="ai">
+                🤖 AI-Рецепт
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== RANDOMIZER SECTION ==================== -->
+    <section id="section-randomizer" class="section active">
+
+        <div class="randomizer-header">
+            <h2>Популярные рецепты</h2>
+            <button class="btn-refresh" id="btn-refresh">
+                <span class="btn-icon">🔀</span>
+                Обновить подборку
+            </button>
+        </div>
+
+        <!-- Category filter -->
+        <div class="category-filter" id="category-filter"></div>
+
+        <!-- Recipes grid (5 cards) -->
+        <div class="recipes-grid" id="recipes-grid"></div>
+
+    </section>
+
+    <!-- ==================== AI RECIPE SECTION ==================== -->
+    <section id="section-ai" class="section ai-section">
+
+        <!-- API Key input -->
+        <div class="ai-api-box">
+            <label for="api-key-input">🔑 OpenAI API ключ:</label>
+            <input
+                id="api-key-input"
+                class="api-key-input"
+                type="password"
+                placeholder="sk-..."
+                autocomplete="off"
+                spellcheck="false"
+            >
+            <button class="btn-save-key" id="btn-save-key">Сохранить</button>
+            <span class="key-saved-badge" id="key-saved-badge">✓ Сохранён</span>
+        </div>
+
+        <!-- Swipe card wrapper -->
+        <div class="ai-card-wrapper">
+            <div id="ai-card" class="ai-card">
+                <!-- Swipe indicators -->
+                <div class="swipe-indicator left" id="swipe-left-indicator">→ Следующий</div>
+                <div class="swipe-indicator right" id="swipe-right-indicator">← Назад</div>
+
+                <!-- Recipe content -->
+                <div id="ai-card-inner" class="ai-card-inner"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="swipe-controls">
+            <span class="swipe-hint">← Свайп или →</span>
+            <button class="btn-next-recipe" id="btn-next-recipe">
+                Следующий рецепт ✨
+            </button>
+            <span class="swipe-hint">стрелки / пробел</span>
+        </div>
+
+        <p class="recipe-counter" id="recipe-counter"></p>
+
+    </section>
+
+    <!-- Modal for full recipe details -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal"></div>
+    </div>
+
+    <script src="js/recipes.js"></script>
+</body>
+</html>

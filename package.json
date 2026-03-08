@@ -1,0 +1,17 @@
+{
+  "name": "memory-diary-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Memory Diary - веб-приложение для сохранения семейной истории",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "landing",
+    "family-tree",
+    "memory-diary"
+  ],
+  "author": "",
+  "license": "MIT"
+}
