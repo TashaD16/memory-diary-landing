@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(npm run:*)",
+      "Bash(tasklist:*)",
+      "Bash(cmd:*)",
+      "Bash(git add:*)",
+      "Bash(git:*)"
+    ]
+  }
+}
