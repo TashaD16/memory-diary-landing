@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-background: hsl(40 30% 97%);
   --color-foreground: hsl(30 15% 12%);
