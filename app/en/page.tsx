@@ -19,27 +19,27 @@ const steps = [
   {
     num: "01",
     icon: UserPlus,
-    title: "Создайте мемориал",
-    desc: "Заполните имя, даты, биографию — это займёт 5 минут",
+    title: "Create a memorial",
+    desc: "Fill in the name, dates, biography — it takes just 5 minutes",
     img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop&q=80",
   },
   {
     num: "02",
     icon: Upload,
-    title: "Загрузите воспоминания",
-    desc: "Фотографии, видео, голосовые записи, письма и дневники",
+    title: "Upload memories",
+    desc: "Photos, videos, voice recordings, letters and diaries",
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=280&fit=crop&q=80",
   },
   {
     num: "03",
     icon: Share2,
-    title: "Поделитесь с семьёй",
-    desc: "Отправьте ссылку — родственники добавят воспоминания без регистрации",
+    title: "Share with family",
+    desc: "Send the link — relatives can add memories without registration",
     img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=280&fit=crop&q=80",
   },
 ];
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
@@ -53,24 +53,24 @@ export default function Home() {
             <span className="font-bold text-lg tracking-tight">Memory Diary</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Возможности</Link>
-            <Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Тарифы</Link>
+            <Link href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</Link>
+            <Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
             <Link href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</Link>
           </div>
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-1 text-sm border border-stone-200 rounded-md px-2 py-1">
-              <Link href="/" className="px-1.5 py-0.5 rounded font-medium text-foreground">RU</Link>
+              <Link href="/" className="px-1.5 py-0.5 rounded text-muted-foreground hover:text-foreground transition-colors">RU</Link>
               <span className="text-stone-300">|</span>
-              <Link href="/en" className="px-1.5 py-0.5 rounded text-muted-foreground hover:text-foreground transition-colors">EN</Link>
+              <Link href="/en" className="px-1.5 py-0.5 rounded font-medium text-foreground">EN</Link>
             </div>
             <Button size="sm" className="bg-amber-800 hover:bg-amber-700 text-amber-50 border-0" asChild>
-              <Link href="#pricing">Начать бесплатно</Link>
+              <Link href="#pricing">Get started free</Link>
             </Button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section — full video banner */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <video
           autoPlay
@@ -81,35 +81,34 @@ export default function Home() {
         >
           <source src="/0803md.mp4" type="video/mp4" />
         </video>
-        {/* Warm beige gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-amber-950/55 via-stone-900/45 to-stone-950/70" />
 
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-100/15 text-amber-200 border border-amber-400/30 hover:bg-amber-100/20 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 mr-1.5" />
-              Сохраните память о близких навсегда
+              Preserve the memory of those you love
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-              Цифровой мемориал<br />
-              <span className="text-amber-300">для тех, кого</span><br />
-              вы любите
+              Digital Memorial<br />
+              <span className="text-amber-300">for those</span><br />
+              you love
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Загружайте фотографии, видео и голосовые записи. ИИ-аватар и чат-бот позволят вашим близким снова ощутить присутствие дорогого человека
+              Upload photos, videos and voice recordings. AI avatar and chatbot let your family feel the presence of your loved one again
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="bg-amber-700 hover:bg-amber-600 text-amber-50 border-0 h-12 px-8 text-base" asChild>
                 <Link href="#pricing">
-                  Создать мемориал бесплатно
+                  Create a memorial for free
                   <ChevronRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8 text-base border-white/25 hover:bg-white/10 text-white backdrop-blur-sm" asChild>
-                <Link href="#features">Узнать больше</Link>
+                <Link href="#features">Learn more</Link>
               </Button>
             </div>
 
@@ -127,7 +126,7 @@ export default function Home() {
                   />
                 ))}
               </div>
-              <span className="text-white/70 text-sm">12 000+ семей уже создали мемориал</span>
+              <span className="text-white/70 text-sm">12,000+ families have already created a memorial</span>
             </div>
           </div>
         </div>
@@ -138,9 +137,9 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
-              { value: "4,9", label: "средняя оценка от семей", icon: Star },
-              { value: "12K+", label: "мемориальных страниц создано", icon: Flame },
-              { value: "98%", label: "семей рекомендуют сервис", icon: Users },
+              { value: "4.9", label: "average rating from families", icon: Star },
+              { value: "12K+", label: "memorial pages created", icon: Flame },
+              { value: "98%", label: "families recommend", icon: Users },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
                 <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center mb-1">
@@ -159,11 +158,11 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-20">
             <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
-              Как это работает
+              How it works
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              Три шага до<br />
-              <span className="gradient-text">вечной памяти</span>
+              Three steps to<br />
+              <span className="gradient-text">eternal memory</span>
             </h2>
           </div>
 
@@ -199,22 +198,22 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl relative">
           <div className="text-center mb-20">
             <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
-              Возможности
+              Features
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              Сохраните всё,<br />
-              <span className="gradient-text">в одном месте</span>
+              Keep everything,<br />
+              <span className="gradient-text">in one place</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
             {[
-              { num: "01", icon: Bot, title: "ИИ-аватар из фотографий", desc: "Загрузите несколько фотографий — сервис создаст анимированный видеоаватар, который двигается и говорит голосом вашего близкого" },
-              { num: "02", icon: Users, title: "Семейный доступ без регистрации", desc: "Поделитесь уникальной ссылкой с родственниками. Любой может добавить воспоминания, фото и истории — без создания аккаунта" },
-              { num: "03", icon: CalendarHeart, title: "Биография и жизненный путь", desc: "Имя, даты рождения и ухода, место жительства, образование, профессия — создайте полноценную биографическую страницу" },
-              { num: "04", icon: ImagePlay, title: "Медиаархив: фото, видео, аудио", desc: "Загружайте фотографии, видеозаписи, голосовые сообщения и документы. Всё хранится надёжно и доступно всей семье" },
-              { num: "05", icon: Mic2, title: "Синтез голоса", desc: "Загрузите аудиозаписи — ElevenLabs клонирует голос. Аватар будет говорить настоящим голосом вашего близкого" },
-              { num: "06", icon: MessageCircleHeart, title: "ИИ-чатбот на основе воспоминаний", desc: "Загрузите тексты, письма, дневники — ИИ научится отвечать так, как отвечал бы ваш близкий" },
+              { num: "01", icon: Bot, title: "AI Avatar", desc: "Upload a few photos — the service creates an animated video avatar that moves and speaks in your loved one's voice" },
+              { num: "02", icon: Users, title: "Family Access", desc: "Share a unique link with relatives. Anyone can add memories, photos and stories — no account required" },
+              { num: "03", icon: CalendarHeart, title: "Biography", desc: "Name, birth and passing dates, hometown, education, profession — create a full biographical page" },
+              { num: "04", icon: ImagePlay, title: "Media Archive", desc: "Upload photos, videos, voice messages and documents. Everything is stored securely and accessible to the whole family" },
+              { num: "05", icon: Mic2, title: "Voice Synthesis", desc: "Upload audio recordings — ElevenLabs clones the voice. The avatar will speak in your loved one's real voice" },
+              { num: "06", icon: MessageCircleHeart, title: "AI Chatbot", desc: "Upload texts, letters, diaries — AI learns to respond as your loved one would have" },
             ].map((feature, i) => (
               <div key={i} className="glass-card rounded-xl p-6 flex gap-5 group hover:border-amber-400/40 transition-all duration-300">
                 <div className="flex-shrink-0">
@@ -238,22 +237,22 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-20">
             <Badge className="mb-4 bg-white/10 text-amber-300 border border-white/10 px-3 py-1 text-xs">
-              Отзывы
+              Testimonials
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Что говорят<br />
-              <span className="text-amber-400">пользователи</span>
+              What families<br />
+              <span className="text-amber-400">are saying</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {[
-              { name: "Мария", text: "После потери папы я не знала, как сохранить о нём память для детей. Memory Diary помог создать страницу, где внуки смогут узнать деда — через его фотографии, голос и истории." },
-              { name: "Алексей", text: "Загрузили старые кассеты с голосом бабушки. ИИ воспроизвёл её интонации так точно, что мама не удержалась от слёз. Это что-то невероятное." },
-              { name: "Светлана", text: "Мы с братьями и сёстрами живём в разных городах. Через одну ссылку все добавили свои воспоминания и фото. Никакой регистрации — просто открыл и пишешь." },
-              { name: "Дмитрий", text: "Чатбот отвечает фразами, которые мог бы сказать папа. Поначалу было странно, но потом понял — это способ не забыть его мудрость и юмор." },
-              { name: "Елена", text: "Оформление мемориала заняло полчаса. Интерфейс интуитивный, поддержка ответила за 10 минут. Рекомендую всем, кто хочет сохранить память достойно." },
-              { name: "Игорь", text: "Сделали мемориальную страницу дедушке — ветерану. Теперь это семейный архив для всего рода. Внуки будут знать, каким он был человеком." },
+              { name: "Maria", text: "After losing my father, I didn't know how to preserve his memory for my children. Memory Diary helped create a page where grandchildren can get to know their grandfather through his photos, voice, and stories." },
+              { name: "Alex", text: "We uploaded old cassettes with my grandmother's voice. The AI reproduced her intonations so accurately that my mother couldn't hold back tears. It's something incredible." },
+              { name: "Svetlana", text: "My brothers and sisters live in different cities. Through one link, everyone added their memories and photos. No registration — just open and write." },
+              { name: "Dmitry", text: "The chatbot replies with phrases my dad might have said. At first it felt strange, but then I understood — it's a way not to forget his wisdom and humor." },
+              { name: "Elena", text: "Setting up the memorial took half an hour. The interface is intuitive, support responded in 10 minutes. I recommend it to anyone who wants to preserve memory with dignity." },
+              { name: "Igor", text: "We created a memorial page for my grandfather, a veteran. Now it's a family archive for the whole lineage. Grandchildren will know what kind of person he was." },
             ].map((testimonial, i) => (
               <div key={i} className="glass-card-dark rounded-xl p-6 flex flex-col gap-4 hover:border-white/20 transition-all duration-300">
                 <div className="flex gap-0.5">
@@ -280,41 +279,41 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl relative">
           <div className="text-center mb-20">
             <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
-              Тарифы
+              Pricing
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              Выберите<br />
-              <span className="gradient-text">свой план</span>
+              Choose<br />
+              <span className="gradient-text">your plan</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Начните бесплатно и расширьте возможности мемориала по мере необходимости
+              Start for free and expand your memorial&apos;s features as needed
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {[
               {
-                name: "Бесплатный",
-                price: "0₽",
-                period: "навсегда",
-                features: ["1 мемориальная страница", "До 100 фотографий", "До 5 видео", "Текстовые воспоминания", "Семейный доступ по ссылке"],
-                cta: "Создать мемориал",
+                name: "Free",
+                price: "$0",
+                period: "forever",
+                features: ["1 memorial page", "Up to 100 photos", "Up to 5 videos", "Text memories", "Family access via link"],
+                cta: "Create a memorial",
                 featured: false,
               },
               {
-                name: "Премиум ⭐",
-                price: "499₽",
-                period: "в месяц",
-                features: ["До 5 мемориальных страниц", "Неограниченное хранилище медиа", "ИИ-аватар из фотографий", "Синтез голоса (ElevenLabs)", "ИИ-чатбот на основе воспоминаний", "Приоритетная поддержка"],
-                cta: "Попробовать 14 дней",
+                name: "Premium ⭐",
+                price: "$9",
+                period: "per month",
+                features: ["Up to 5 memorial pages", "Unlimited media storage", "AI avatar from photos", "Voice synthesis (ElevenLabs)", "AI chatbot based on memories", "Priority support"],
+                cta: "Try 14 days free",
                 featured: true,
               },
               {
-                name: "Семейный",
-                price: "999₽",
-                period: "в месяц",
-                features: ["Всё из Премиум", "Неограниченное число страниц", "До 20 участников-соавторов", "Публичная мемориальная страница", "Персональный менеджер"],
-                cta: "Связаться с нами",
+                name: "Family",
+                price: "$19",
+                period: "per month",
+                features: ["Everything in Premium", "Unlimited pages", "Up to 20 co-authors", "Public memorial page", "Personal manager"],
+                cta: "Contact us",
                 featured: false,
               },
             ].map((plan, i) => (
@@ -330,7 +329,7 @@ export default function Home() {
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <Badge className="bg-amber-500 text-white border-0 px-3 py-1 text-xs font-medium">
                       <Sparkles className="h-3 w-3 mr-1" />
-                      Популярно
+                      Popular
                     </Badge>
                   </div>
                 )}
@@ -375,18 +374,18 @@ export default function Home() {
               FAQ
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Частые<br />
-              <span className="gradient-text">вопросы</span>
+              Common<br />
+              <span className="gradient-text">questions</span>
             </h2>
           </div>
 
           <Accordion type="single" collapsible className="w-full space-y-3">
             {[
-              { q: "Как создать мемориальную страницу?", a: "Зарегистрируйтесь, нажмите «Создать мемориал» и заполните основные данные: имя, даты, биографию. Затем загружайте фотографии, видео и воспоминания. Это займёт от 10 до 30 минут." },
-              { q: "Как работает ИИ-аватар?", a: "Загрузите несколько чётких фотографий лица. Сервис передаёт их в систему генерации видео (HeyGen / D-ID), которая создаёт анимированного аватара. Для синтеза голоса загрузите аудиозаписи длиной от 1 минуты — ElevenLabs клонирует голос." },
-              { q: "Как работает ИИ-чатбот?", a: "Загрузите текстовые воспоминания, письма, дневники и истории о вашем близком. Система обрабатывает их с помощью семантического поиска и обучает языковую модель отвечать в его стиле. Чем больше текстов — тем точнее ответы." },
-              { q: "Как обеспечена приватность данных?", a: "Мемориальная страница по умолчанию закрыта — доступ только по уникальной ссылке. Публичный режим включается вручную. Все загруженные медиафайлы и воспоминания шифруются при хранении." },
-              { q: "Нужно ли регистрироваться родственникам?", a: "Нет. Создатель мемориала генерирует уникальную ссылку-приглашение. Родственники переходят по ней и сразу могут добавлять воспоминания, фотографии и комментарии без создания аккаунта." },
+              { q: "How do I create a memorial page?", a: "Register, click 'Create memorial' and fill in the basic details: name, dates, biography. Then upload photos, videos and memories. It takes between 10 and 30 minutes." },
+              { q: "How does the AI avatar work?", a: "Upload several clear photos of the face. The service sends them to a video generation system (HeyGen / D-ID), which creates an animated avatar. For voice synthesis, upload audio recordings at least 1 minute long — ElevenLabs will clone the voice." },
+              { q: "How does the AI chatbot work?", a: "Upload text memories, letters, diaries and stories about your loved one. The system processes them using semantic search and trains a language model to respond in their style. The more texts — the more accurate the responses." },
+              { q: "How is privacy ensured?", a: "The memorial page is private by default — accessible only via a unique link. Public mode is enabled manually. All uploaded media files and memories are encrypted at rest." },
+              { q: "Do relatives need to register?", a: "No. The memorial creator generates a unique invite link. Relatives follow it and can immediately add memories, photos and comments without creating an account." },
             ].map((item, i) => (
               <AccordionItem
                 key={i}
@@ -411,15 +410,15 @@ export default function Home() {
         <div className="orb w-96 h-96 bg-amber-600 top-0 left-1/2 -translate-x-1/2 opacity-20" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-            Создайте мемориал,<br />
-            <span className="text-amber-300">пока помните каждую деталь</span>
+            Create a memorial<br />
+            <span className="text-amber-300">while you remember every detail</span>
           </h2>
           <p className="text-amber-200/70 mb-10 text-lg max-w-xl mx-auto">
-            Бесплатно. Без кредитной карты. Мемориал готов за 10 минут.
+            Free. No credit card. Memorial ready in 10 minutes.
           </p>
           <Button size="lg" className="bg-amber-500 hover:bg-amber-400 text-white border-0 h-13 px-10 text-base" asChild>
             <Link href="#pricing">
-              Создать мемориал бесплатно
+              Create a memorial for free
               <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
@@ -438,31 +437,31 @@ export default function Home() {
                 <span className="font-bold text-lg">Memory Diary</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Цифровые мемориалы для сохранения памяти о близких. ИИ-аватар, синтез голоса и чатбот — всё в одном месте.
+                Digital memorials for preserving the memory of loved ones. AI avatar, voice synthesis and chatbot — all in one place.
               </p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-5">О проекте</h3>
+              <h3 className="text-sm font-semibold mb-5">About</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><Link href="#features" className="hover:text-amber-700 transition-colors">Возможности</Link></li>
-                <li><Link href="#pricing" className="hover:text-amber-700 transition-colors">Тарифы</Link></li>
+                <li><Link href="#features" className="hover:text-amber-700 transition-colors">Features</Link></li>
+                <li><Link href="#pricing" className="hover:text-amber-700 transition-colors">Pricing</Link></li>
                 <li><Link href="#faq" className="hover:text-amber-700 transition-colors">FAQ</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-5">Поддержка</h3>
+              <h3 className="text-sm font-semibold mb-5">Support</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><Link href="#" className="hover:text-amber-700 transition-colors">Центр помощи</Link></li>
-                <li><Link href="#" className="hover:text-amber-700 transition-colors">Контакты</Link></li>
-                <li><Link href="#" className="hover:text-amber-700 transition-colors">Соглашение</Link></li>
+                <li><Link href="#" className="hover:text-amber-700 transition-colors">Help center</Link></li>
+                <li><Link href="#" className="hover:text-amber-700 transition-colors">Contact us</Link></li>
+                <li><Link href="#" className="hover:text-amber-700 transition-colors">Terms</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-5">Ресурсы</h3>
+              <h3 className="text-sm font-semibold mb-5">Resources</h3>
               <div className="space-y-3">
                 <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
                   <BookOpen className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
-                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">Документация</span>
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">Documentation</span>
                 </Link>
                 <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
                   <Github className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
@@ -473,7 +472,7 @@ export default function Home() {
           </div>
           <Separator className="bg-stone-200 mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2025 Memory Diary. Все права защищены.</p>
+            <p>&copy; 2025 Memory Diary. All rights reserved.</p>
             <p>support@memorydiary.ru</p>
           </div>
         </div>
