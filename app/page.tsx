@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
-import { TreePine, Sparkles, Users, Calendar, Image, Bell, Smartphone, Star, Apple, Check, ChevronRight, Zap, Printer } from "lucide-react";
+import { BookHeart, Sparkles, Users, CalendarHeart, ImagePlay, Mic2, BookOpen, Star, Github, Check, ChevronRight, MessageCircleHeart, Bot, Flame } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between max-w-7xl">
           <div className="flex items-center gap-2.5">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-700 to-stone-600 flex items-center justify-center">
-              <TreePine className="h-4 w-4 text-amber-100" />
+              <BookHeart className="h-4 w-4 text-amber-100" />
             </div>
             <span className="font-bold text-lg tracking-tight">Memory Diary</span>
           </div>
@@ -51,23 +51,23 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-amber-100/15 text-amber-200 border border-amber-400/30 hover:bg-amber-100/20 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 mr-1.5" />
-              Оцифруйте историю вашей семьи
+              Сохраните память о близких навсегда
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-              Онлайн-конструктор<br />
-              <span className="text-amber-300">вашей семейной</span><br />
-              истории
+              Цифровой мемориал<br />
+              <span className="text-amber-300">для тех, кого</span><br />
+              вы любите
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Приглашайте близких, рисуйте семейное древо, загружайте фотографии и сохраняйте воспоминания для будущих поколений
+              Загружайте фотографии, видео и голосовые записи. ИИ-аватар и чат-бот позволят вашим близким снова ощутить присутствие дорогого человека
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="bg-amber-700 hover:bg-amber-600 text-amber-50 border-0 h-12 px-8 text-base" asChild>
                 <Link href="#pricing">
-                  Построить древо бесплатно
+                  Создать мемориал бесплатно
                   <ChevronRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
@@ -84,9 +84,9 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
-              { value: "4,9", label: "оценка на Google & AppStore", icon: Star },
-              { value: "420K+", label: "скачиваний приложения", icon: Zap },
-              { value: "13M+", label: "персон в базе", icon: Users },
+              { value: "4,9", label: "средняя оценка от семей", icon: Star },
+              { value: "12K+", label: "мемориальных страниц создано", icon: Flame },
+              { value: "98%", label: "семей рекомендуют сервис", icon: Users },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
                 <div className="h-10 w-10 rounded-full bg-amber-100 flex items-center justify-center mb-1">
@@ -109,19 +109,19 @@ export default function Home() {
               Возможности
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              История вашей семьи<br />
+              Сохраните всё,<br />
               <span className="gradient-text">в одном месте</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
             {[
-              { num: "01", icon: Smartphone, title: "Генеалогическое древо", desc: "Пользуйтесь на телефоне, планшете и ПК — все данные синхронизированы в реальном времени" },
-              { num: "02", icon: Users, title: "Совместная работа", desc: "Приглашайте родственников. Бесконечный размер древа позволит добавить всю семью" },
-              { num: "03", icon: Calendar, title: "Даты и события", desc: "Заполняйте важные даты, места рождения и ключевые события жизни каждого родственника" },
-              { num: "04", icon: Image, title: "Семейный архив", desc: "Храните фотографии, документы и интересные заметки о вашей семье в одном месте" },
-              { num: "05", icon: Bell, title: "Умные уведомления", desc: "Получайте напоминания о предстоящих важных датах в вашей семье" },
-              { num: "06", icon: Printer, title: "Экспорт и печать", desc: "Воспользуйтесь расширенными функциями и распечатайте красивое семейное древо" },
+              { num: "01", icon: Bot, title: "ИИ-аватар из фотографий", desc: "Загрузите несколько фотографий — сервис создаст анимированный видеоаватар, который двигается и говорит голосом вашего близкого" },
+              { num: "02", icon: Users, title: "Семейный доступ без регистрации", desc: "Поделитесь уникальной ссылкой с родственниками. Любой может добавить воспоминания, фото и истории — без создания аккаунта" },
+              { num: "03", icon: CalendarHeart, title: "Биография и жизненный путь", desc: "Имя, даты рождения и ухода, место жительства, образование, профессия — создайте полноценную биографическую страницу" },
+              { num: "04", icon: ImagePlay, title: "Медиаархив: фото, видео, аудио", desc: "Загружайте фотографии, видеозаписи, голосовые сообщения и документы. Всё хранится надёжно и доступно всей семье" },
+              { num: "05", icon: Mic2, title: "Синтез голоса", desc: "Загрузите аудиозаписи — ElevenLabs клонирует голос. Аватар будет говорить настоящим голосом вашего близкого" },
+              { num: "06", icon: MessageCircleHeart, title: "ИИ-чатбот на основе воспоминаний", desc: "Загрузите тексты, письма, дневники — ИИ научится отвечать так, как отвечал бы ваш близкий" },
             ].map((feature, i) => (
               <div key={i} className="glass-card rounded-xl p-6 flex gap-5 group hover:border-amber-400/40 transition-all duration-300">
                 <div className="flex-shrink-0">
@@ -155,12 +155,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {[
-              { name: "Далья", text: "Отличное приложение! Очень удобное, понятное и супер полезное! Это мой первый отзыв за 9 лет использования AppStore, вот насколько понравилось!" },
-              { name: "Ольга", text: "Крутое приложение! Сразу приобрели премиум. Сыну 7 лет, вместе сидим разбираемся в семейном роде. Разработчикам успехов!" },
-              { name: "Тиврок", text: "Очень классное приложение, отзывчивый разработчик. Не жалко ни рубля на подписку! Спасибо за такое замечательное приложение!" },
-              { name: "Саша", text: "Приложение дало ощутимый толчок для изучения моих родственников. С нетерпением жду нововведений! Спасибо!" },
-              { name: "Алекс", text: "Великолепное приложение которое постоянно развивается, не останавливайтесь на достигнутом и продолжайте радовать пользователей!" },
-              { name: "Руслан", text: "Пока всё отлично. Зачотная прога. Большой плюс за то что работает на Huawei без Google сервисов." },
+              { name: "Мария", text: "После потери папы я не знала, как сохранить о нём память для детей. Memory Diary помог создать страницу, где внуки смогут узнать деда — через его фотографии, голос и истории." },
+              { name: "Алексей", text: "Загрузили старые кассеты с голосом бабушки. ИИ воспроизвёл её интонации так точно, что мама не удержалась от слёз. Это что-то невероятное." },
+              { name: "Светлана", text: "Мы с братьями и сёстрами живём в разных городах. Через одну ссылку все добавили свои воспоминания и фото. Никакой регистрации — просто открыл и пишешь." },
+              { name: "Дмитрий", text: "Чатбот отвечает фразами, которые мог бы сказать папа. Поначалу было странно, но потом понял — это способ не забыть его мудрость и юмор." },
+              { name: "Елена", text: "Оформление мемориала заняло полчаса. Интерфейс интуитивный, поддержка ответила за 10 минут. Рекомендую всем, кто хочет сохранить память достойно." },
+              { name: "Игорь", text: "Сделали мемориальную страницу дедушке — ветерану. Теперь это семейный архив для всего рода. Внуки будут знать, каким он был человеком." },
             ].map((testimonial, i) => (
               <div key={i} className="glass-card rounded-xl p-6 flex flex-col gap-4 hover:border-amber-400/40 transition-all duration-300">
                 <div className="flex gap-0.5">
@@ -194,7 +194,7 @@ export default function Home() {
               <span className="gradient-text">свой план</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Начните бесплатно и расширьте возможности по мере роста вашего семейного древа
+              Начните бесплатно и расширьте возможности мемориала по мере необходимости
             </p>
           </div>
 
@@ -204,15 +204,15 @@ export default function Home() {
                 name: "Бесплатный",
                 price: "0₽",
                 period: "навсегда",
-                features: ["До 50 человек в древе", "До 100 фотографий", "До 10 видео", "Базовые AI-аватары", "Совместная работа"],
-                cta: "Начать бесплатно",
+                features: ["1 мемориальная страница", "До 100 фотографий", "До 5 видео", "Текстовые воспоминания", "Семейный доступ по ссылке"],
+                cta: "Создать мемориал",
                 featured: false,
               },
               {
-                name: "Премиум",
+                name: "Премиум ⭐",
                 price: "499₽",
                 period: "в месяц",
-                features: ["Неограниченное количество людей", "Неограниченное хранилище", "Продвинутые AI-аватары", "Приоритетная поддержка", "Экспорт данных", "Расширенная аналитика"],
+                features: ["До 5 мемориальных страниц", "Неограниченное хранилище медиа", "ИИ-аватар из фотографий", "Синтез голоса (ElevenLabs)", "ИИ-чатбот на основе воспоминаний", "Приоритетная поддержка"],
                 cta: "Попробовать 14 дней",
                 featured: true,
               },
@@ -220,7 +220,7 @@ export default function Home() {
                 name: "Семейный",
                 price: "999₽",
                 period: "в месяц",
-                features: ["Всё из Премиум", "До 10 семейных аккаунтов", "Приватные семейные группы", "Персональный менеджер", "Кастомные AI-модели"],
+                features: ["Всё из Премиум", "Неограниченное число страниц", "До 20 участников-соавторов", "Публичная мемориальная страница", "Персональный менеджер"],
                 cta: "Связаться с нами",
                 featured: false,
               },
@@ -289,11 +289,11 @@ export default function Home() {
 
           <Accordion type="single" collapsible className="w-full space-y-3">
             {[
-              { q: "Как распечатать древо?", a: "В премиум-планах доступна функция экспорта и печати семейного древа в различных форматах (PDF, SVG). Вы можете распечатать древо прямо из приложения или экспортировать файл." },
-              { q: "Как обеспечена приватность данных?", a: "Мы используем современные технологии шифрования. Вы полностью контролируете, кто может видеть информацию о вашей семье." },
-              { q: "Как работает AI-аватар?", a: "AI-аватар анализирует всю информацию в профиле: воспоминания, фотографии, документы. На основе этих данных создаётся персонализированная модель." },
-              { q: "Можно ли экспортировать данные?", a: "Да, в премиум-планах доступен полный экспорт всех данных в различных форматах: JSON, PDF, GEDCOM." },
-              { q: "Сколько человек могут работать над одним древом?", a: "В бесплатном плане до 5 человек. В премиум-плане количество участников неограничено." },
+              { q: "Как создать мемориальную страницу?", a: "Зарегистрируйтесь, нажмите «Создать мемориал» и заполните основные данные: имя, даты, биографию. Затем загружайте фотографии, видео и воспоминания. Это займёт от 10 до 30 минут." },
+              { q: "Как работает ИИ-аватар?", a: "Загрузите несколько чётких фотографий лица. Сервис передаёт их в систему генерации видео (HeyGen / D-ID), которая создаёт анимированного аватара. Для синтеза голоса загрузите аудиозаписи длиной от 1 минуты — ElevenLabs клонирует голос." },
+              { q: "Как работает ИИ-чатбот?", a: "Загрузите текстовые воспоминания, письма, дневники и истории о вашем близком. Система обрабатывает их с помощью семантического поиска и обучает языковую модель отвечать в его стиле. Чем больше текстов — тем точнее ответы." },
+              { q: "Как обеспечена приватность данных?", a: "Мемориальная страница по умолчанию закрыта — доступ только по уникальной ссылке. Публичный режим включается вручную. Все загруженные медиафайлы и воспоминания шифруются при хранении." },
+              { q: "Нужно ли регистрироваться родственникам?", a: "Нет. Создатель мемориала генерирует уникальную ссылку-приглашение. Родственники переходят по ней и сразу могут добавлять воспоминания, фотографии и комментарии без создания аккаунта." },
             ].map((item, i) => (
               <AccordionItem
                 key={i}
@@ -318,15 +318,15 @@ export default function Home() {
         <div className="orb w-96 h-96 bg-amber-600 top-0 left-1/2 -translate-x-1/2 opacity-20" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">
-            Начните сохранять<br />
-            <span className="text-amber-300">семейную историю сегодня</span>
+            Создайте мемориал,<br />
+            <span className="text-amber-300">пока помните каждую деталь</span>
           </h2>
           <p className="text-amber-200/70 mb-10 text-lg max-w-xl mx-auto">
-            Бесплатно. Без кредитной карты. Первые шаги за 2 минуты.
+            Бесплатно. Без кредитной карты. Мемориал готов за 10 минут.
           </p>
           <Button size="lg" className="bg-amber-500 hover:bg-amber-400 text-white border-0 h-13 px-10 text-base" asChild>
             <Link href="#pricing">
-              Создать семейное древо
+              Создать мемориал бесплатно
               <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
@@ -340,12 +340,12 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2.5 mb-5">
                 <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-700 to-stone-600 flex items-center justify-center">
-                  <TreePine className="h-4 w-4 text-amber-100" />
+                  <BookHeart className="h-4 w-4 text-amber-100" />
                 </div>
                 <span className="font-bold text-lg">Memory Diary</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Сохраняйте семейную историю для будущих поколений. Оживляйте воспоминания с помощью ИИ.
+                Цифровые мемориалы для сохранения памяти о близких. ИИ-аватар, синтез голоса и чатбот — всё в одном месте.
               </p>
             </div>
             <div>
@@ -365,22 +365,22 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-5">Скачать</h3>
+              <h3 className="text-sm font-semibold mb-5">Ресурсы</h3>
               <div className="space-y-3">
                 <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
-                  <Apple className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
-                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">App Store</span>
+                  <BookOpen className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">Документация</span>
                 </Link>
                 <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
-                  <Smartphone className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
-                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">Google Play</span>
+                  <Github className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">GitHub</span>
                 </Link>
               </div>
             </div>
           </div>
           <Separator className="bg-stone-200 mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2024 Memory Diary. Все права защищены.</p>
+            <p>&copy; 2025 Memory Diary. Все права защищены.</p>
             <p>support@memorydiary.ru</p>
           </div>
         </div>
