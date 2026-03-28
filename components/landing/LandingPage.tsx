@@ -90,45 +90,18 @@ export function LandingPage({ content }: { content: LandingContent }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Badge className="mb-6 bg-[#B5A892]/15 text-[#D2D2D1] border border-[#B5A892]/30 hover:bg-[#B5A892]/20 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
-              <Sparkles className="h-3.5 w-3.5 mr-1.5" />
-              {content.hero.badge}
-            </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
-              {content.hero.h1Line1}<br />
-              <span className="text-[#B5A892]">{content.hero.h1Accent}</span><br />
-              {content.hero.h1Line3}
+              {content.hero.badge}
             </h1>
             <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
               {content.hero.p}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0 h-12 px-8 text-base" asChild>
-                <Link href="#pricing">
-                  {content.hero.ctaPrimary}
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 text-base border-white/25 hover:bg-white/10 text-white backdrop-blur-sm" asChild>
-                <Link href="#features">{content.hero.ctaSecondary}</Link>
-              </Button>
-            </div>
-            <div className="flex items-center justify-center gap-3 mt-6">
-              <div className="flex -space-x-2">
-                {avatarUrls.map((src) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    width={32}
-                    height={32}
-                    priority
-                    className="rounded-full border-2 border-white/30 object-cover"
-                    alt=""
-                  />
-                ))}
-              </div>
-              <span className="text-white/70 text-sm">{content.hero.trustText}</span>
-            </div>
+            <Button size="lg" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0 h-12 px-8 text-base" asChild>
+              <Link href="#pricing">
+                {content.hero.ctaPrimary}
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
