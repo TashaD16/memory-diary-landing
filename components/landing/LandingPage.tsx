@@ -107,7 +107,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#15160A]">
+      <section className="py-16 bg-[#15160A]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {content.stats.map((stat, i) => (
@@ -131,7 +131,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* How it Works */}
-      <section className="py-40 bg-[#D2D2D1]/30">
+      <section className="py-32 bg-[#D2D2D1]/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div className="text-center mb-20" {...fadeUp}>
             <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
@@ -177,7 +177,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-40 relative">
+      <section id="features" className="py-32 relative">
         <div className="dot-grid absolute inset-0 opacity-60" />
         <div className="container mx-auto px-6 max-w-7xl relative">
           <motion.div className="text-center mb-20" {...fadeUp}>
@@ -224,7 +224,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Testimonials */}
-      <section className="py-40 bg-[#15160A]">
+      <section className="py-32 bg-[#15160A]">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div className="text-center mb-20" {...fadeUp}>
             <Badge className="mb-4 bg-[#D2D2D1]/10 text-[#B5A892] border border-[#D2D2D1]/10 px-3 py-1 text-xs">
@@ -264,7 +264,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-40 relative">
+      <section id="pricing" className="py-32 relative">
         <div className="dot-grid absolute inset-0 opacity-60" />
         <div className="container mx-auto px-6 max-w-7xl relative">
           <motion.div className="text-center mb-20" {...fadeUp}>
@@ -333,7 +333,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-40 border-t border-[#BEBBB4] bg-[#D2D2D1]/40">
+      <section id="faq" className="py-32 border-t border-[#BEBBB4] bg-[#D2D2D1]/40">
         <div className="container mx-auto px-6 max-w-3xl">
           <motion.div className="text-center mb-16" {...fadeUp}>
             <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
@@ -364,7 +364,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Waitlist / Email Form */}
-      <section className="py-24 bg-[#D2D2D1]/40 border-t border-[#BEBBB4]">
+      <section className="py-20 bg-[#D2D2D1]/40 border-t border-[#BEBBB4]">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <motion.div {...fadeUp}>
             <h3 className="text-2xl font-bold mb-2">{content.waitlist.h3}</h3>
@@ -391,7 +391,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-28 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#15160A] via-[#6F5B42] to-[#15160A]" />
         <div className="orb w-96 h-96 bg-[#6F5B42] top-0 left-1/2 -translate-x-1/2 opacity-20" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10 text-center">
@@ -412,7 +412,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#BEBBB4] py-20 bg-[#D2D2D1]/30">
+      <footer className="border-t border-[#BEBBB4] py-16 bg-[#D2D2D1]/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div>
