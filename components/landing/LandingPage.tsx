@@ -40,11 +40,11 @@ export function LandingPage({ content }: { content: LandingContent }) {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 border-b border-stone-200 bg-background/90 backdrop-blur-xl">
+      <nav className="fixed top-0 w-full z-50 border-b border-[#BEBBB4] bg-background/90 backdrop-blur-xl">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between max-w-7xl">
           <div className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-700 to-stone-600 flex items-center justify-center">
-              <BookHeart className="h-4 w-4 text-amber-100" />
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#6F5B42] to-[#15160A] flex items-center justify-center">
+              <BookHeart className="h-4 w-4 text-[#D2D2D1]" />
             </div>
             <span className="font-bold text-lg tracking-tight">Memory Diary</span>
           </div>
@@ -54,14 +54,14 @@ export function LandingPage({ content }: { content: LandingContent }) {
             <Link href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{content.nav.faq}</Link>
           </div>
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-1 text-sm border border-stone-200 rounded-md px-2 py-1">
+            <div className="hidden md:flex items-center gap-1 text-sm border border-[#BEBBB4] rounded-md px-2 py-1">
               <Link
                 href="/"
                 className={`px-1.5 py-0.5 rounded transition-colors ${isRu ? "font-medium text-foreground" : "text-muted-foreground hover:text-foreground"}`}
               >
                 RU
               </Link>
-              <span className="text-stone-300">|</span>
+              <span className="text-[#BEBBB4]">|</span>
               <Link
                 href="/en"
                 className={`px-1.5 py-0.5 rounded transition-colors ${!isRu ? "font-medium text-foreground" : "text-muted-foreground hover:text-foreground"}`}
@@ -69,7 +69,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
                 EN
               </Link>
             </div>
-            <Button size="sm" className="bg-amber-800 hover:bg-amber-700 text-amber-50 border-0" asChild>
+            <Button size="sm" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0" asChild>
               <Link href="#pricing">{content.nav.cta}</Link>
             </Button>
           </div>
@@ -81,7 +81,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/0803md.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-950/55 via-stone-900/45 to-stone-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#15160A]/65 via-[#15160A]/45 to-[#15160A]/75" />
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -89,20 +89,20 @@ export function LandingPage({ content }: { content: LandingContent }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Badge className="mb-6 bg-amber-100/15 text-amber-200 border border-amber-400/30 hover:bg-amber-100/20 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
+            <Badge className="mb-6 bg-[#B5A892]/15 text-[#D2D2D1] border border-[#B5A892]/30 hover:bg-[#B5A892]/20 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 mr-1.5" />
               {content.hero.badge}
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
               {content.hero.h1Line1}<br />
-              <span className="text-amber-300">{content.hero.h1Accent}</span><br />
+              <span className="text-[#B5A892]">{content.hero.h1Accent}</span><br />
               {content.hero.h1Line3}
             </h1>
             <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
               {content.hero.p}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-amber-700 hover:bg-amber-600 text-amber-50 border-0 h-12 px-8 text-base" asChild>
+              <Button size="lg" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0 h-12 px-8 text-base" asChild>
                 <Link href="#pricing">
                   {content.hero.ctaPrimary}
                   <ChevronRight className="ml-1 h-4 w-4" />
@@ -133,7 +133,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-stone-900">
+      <section className="py-16 bg-[#15160A]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {content.stats.map((stat, i) => (
@@ -145,11 +145,11 @@ export function LandingPage({ content }: { content: LandingContent }) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center mb-1">
-                  <stat.icon className="h-5 w-5 text-amber-400" />
+                <div className="h-10 w-10 rounded-full bg-[#D2D2D1]/10 flex items-center justify-center mb-1">
+                  <stat.icon className="h-5 w-5 text-[#B5A892]" />
                 </div>
                 <div className="text-3xl font-bold text-white">{stat.value}</div>
-                <p className="text-sm text-stone-400">{stat.label}</p>
+                <p className="text-sm text-[#B5A892]">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -157,10 +157,10 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* How it Works */}
-      <section className="py-32 bg-stone-50">
+      <section className="py-32 bg-[#D2D2D1]/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div className="text-center mb-20" {...fadeUp}>
-            <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
+            <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
               {content.howItWorks.badge}
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
@@ -172,7 +172,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
             {content.howItWorks.steps.map((step, i) => (
               <motion.div
                 key={i}
-                className="rounded-2xl overflow-hidden border border-stone-200 bg-white hover:border-amber-400/50 transition-all duration-300"
+                className="rounded-2xl overflow-hidden border border-[#BEBBB4] bg-[#EAEAE8] hover:border-[#6F5B42]/50 transition-all duration-300"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -187,12 +187,12 @@ export function LandingPage({ content }: { content: LandingContent }) {
                     alt={step.title}
                     sizes="(max-width: 768px) 100vw, 400px"
                   />
-                  <div className="absolute top-3 left-3 h-8 w-8 rounded-full bg-amber-700 flex items-center justify-center">
-                    <step.icon className="h-4 w-4 text-amber-100" />
+                  <div className="absolute top-3 left-3 h-8 w-8 rounded-full bg-[#6F5B42] flex items-center justify-center">
+                    <step.icon className="h-4 w-4 text-[#D2D2D1]" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <div className="text-xs text-amber-600 font-mono mb-2">{step.num}</div>
+                  <div className="text-xs text-[#6F5B42] font-mono mb-2">{step.num}</div>
                   <h3 className="text-base font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
@@ -207,7 +207,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
         <div className="dot-grid absolute inset-0 opacity-60" />
         <div className="container mx-auto px-6 max-w-7xl relative">
           <motion.div className="text-center mb-20" {...fadeUp}>
-            <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
+            <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
               {content.features.badge}
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
@@ -219,19 +219,19 @@ export function LandingPage({ content }: { content: LandingContent }) {
             {content.features.items.map((feature, i) => (
               <motion.div
                 key={i}
-                className="glass-card rounded-xl p-6 flex gap-5 group hover:border-amber-400/40 transition-all duration-300"
+                className="glass-card rounded-xl p-6 flex gap-5 group hover:border-[#6F5B42]/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <div className="flex-shrink-0">
-                  <div className="h-12 w-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center group-hover:bg-amber-200 transition-colors">
-                    <feature.icon className="h-5 w-5 text-amber-700" />
+                  <div className="h-12 w-12 rounded-xl bg-[#D2D2D1] border border-[#BEBBB4] flex items-center justify-center group-hover:bg-[#BEBBB4] transition-colors">
+                    <feature.icon className="h-5 w-5 text-[#6F5B42]" />
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-amber-600 font-mono mb-1">{feature.num}</div>
+                  <div className="text-xs text-[#6F5B42] font-mono mb-1">{feature.num}</div>
                   <h3 className="text-base font-semibold mb-1.5">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
                 </div>
@@ -242,22 +242,22 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 bg-stone-900">
+      <section className="py-32 bg-[#15160A]">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div className="text-center mb-20" {...fadeUp}>
-            <Badge className="mb-4 bg-white/10 text-amber-300 border border-white/10 px-3 py-1 text-xs">
+            <Badge className="mb-4 bg-[#D2D2D1]/10 text-[#B5A892] border border-[#D2D2D1]/10 px-3 py-1 text-xs">
               {content.testimonials.badge}
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
               {content.testimonials.h2Line1}<br />
-              <span className="text-amber-400">{content.testimonials.h2Accent}</span>
+              <span className="text-[#B5A892]">{content.testimonials.h2Accent}</span>
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {content.testimonials.items.map((testimonial, i) => (
               <motion.div
                 key={i}
-                className="glass-card-dark rounded-xl p-6 flex flex-col gap-4 hover:border-white/20 transition-all duration-300"
+                className="glass-card-dark rounded-xl p-6 flex flex-col gap-4 hover:border-[#D2D2D1]/20 transition-all duration-300"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -265,12 +265,12 @@ export function LandingPage({ content }: { content: LandingContent }) {
               >
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="h-4 w-4 text-amber-400 fill-amber-400" />
+                    <Star key={j} className="h-4 w-4 text-[#B5A892] fill-[#B5A892]" />
                   ))}
                 </div>
-                <p className="text-sm text-stone-300 leading-relaxed flex-1">{testimonial.text}</p>
-                <div className="flex items-center gap-3 pt-2 border-t border-white/10">
-                  <div className="h-8 w-8 rounded-full bg-amber-600 flex items-center justify-center text-xs font-bold text-white">
+                <p className="text-sm text-[#BEBBB4] leading-relaxed flex-1">{testimonial.text}</p>
+                <div className="flex items-center gap-3 pt-2 border-t border-[#D2D2D1]/10">
+                  <div className="h-8 w-8 rounded-full bg-[#6F5B42] flex items-center justify-center text-xs font-bold text-white">
                     {testimonial.name[0]}
                   </div>
                   <span className="text-sm font-medium text-white">{testimonial.name}</span>
@@ -286,7 +286,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
         <div className="dot-grid absolute inset-0 opacity-60" />
         <div className="container mx-auto px-6 max-w-7xl relative">
           <motion.div className="text-center mb-20" {...fadeUp}>
-            <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
+            <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
               {content.pricing.badge}
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
@@ -301,8 +301,8 @@ export function LandingPage({ content }: { content: LandingContent }) {
                 key={i}
                 className={`relative rounded-2xl p-6 flex flex-col gap-6 transition-all duration-300 ${
                   plan.featured
-                    ? "bg-gradient-to-b from-amber-800 to-stone-800 border border-amber-600/50 text-amber-50 shadow-xl"
-                    : "glass-card hover:border-amber-400/40"
+                    ? "bg-gradient-to-b from-[#6F5B42] to-[#15160A] border border-[#B5A892]/50 text-[#D2D2D1] shadow-xl"
+                    : "glass-card hover:border-[#6F5B42]/40"
                 }`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -311,34 +311,34 @@ export function LandingPage({ content }: { content: LandingContent }) {
               >
                 {plan.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-amber-500 text-white border-0 px-3 py-1 text-xs font-medium">
+                    <Badge className="bg-[#B5A892] text-[#15160A] border-0 px-3 py-1 text-xs font-medium">
                       <Sparkles className="h-3 w-3 mr-1" />
                       {content.pricing.popularLabel}
                     </Badge>
                   </div>
                 )}
                 <div>
-                  <div className={`text-sm mb-3 ${plan.featured ? "text-amber-300" : "text-muted-foreground"}`}>{plan.name}</div>
+                  <div className={`text-sm mb-3 ${plan.featured ? "text-[#D2D2D1]" : "text-muted-foreground"}`}>{plan.name}</div>
                   <div className="flex items-end gap-1">
                     <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className={`mb-1 text-sm ${plan.featured ? "text-amber-300" : "text-muted-foreground"}`}>/{plan.period}</span>
+                    <span className={`mb-1 text-sm ${plan.featured ? "text-[#BEBBB4]" : "text-muted-foreground"}`}>/{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-3 flex-1">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-center gap-3 text-sm">
-                      <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 ${plan.featured ? "bg-amber-600/40" : "bg-amber-100"}`}>
-                        <Check className={`h-3 w-3 ${plan.featured ? "text-amber-300" : "text-amber-700"}`} />
+                      <div className={`h-5 w-5 rounded-full flex items-center justify-center flex-shrink-0 ${plan.featured ? "bg-[#6F5B42]/50" : "bg-[#D2D2D1]"}`}>
+                        <Check className={`h-3 w-3 ${plan.featured ? "text-[#D2D2D1]" : "text-[#6F5B42]"}`} />
                       </div>
-                      <span className={plan.featured ? "text-amber-100" : "text-muted-foreground"}>{feature}</span>
+                      <span className={plan.featured ? "text-[#D2D2D1]" : "text-muted-foreground"}>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Button
                   className={`w-full h-11 ${
                     plan.featured
-                      ? "bg-amber-500 hover:bg-amber-400 text-white border-0"
-                      : "bg-amber-800 hover:bg-amber-700 text-amber-50 border-0"
+                      ? "bg-[#D2D2D1] hover:bg-white text-[#15160A] border-0"
+                      : "bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0"
                   }`}
                   asChild
                 >
@@ -351,10 +351,10 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-32 border-t border-stone-200 bg-amber-50/60">
+      <section id="faq" className="py-32 border-t border-[#BEBBB4] bg-[#D2D2D1]/40">
         <div className="container mx-auto px-6 max-w-3xl">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <Badge className="mb-4 bg-amber-100 text-amber-800 border border-amber-200 px-3 py-1 text-xs">
+            <Badge className="mb-4 bg-[#D2D2D1] text-[#6F5B42] border border-[#BEBBB4] px-3 py-1 text-xs">
               {content.faq.badge}
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -367,9 +367,9 @@ export function LandingPage({ content }: { content: LandingContent }) {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="glass-card rounded-xl px-5 border-stone-200 data-[state=open]:border-amber-400/50 transition-colors"
+                className="glass-card rounded-xl px-5 border-[#BEBBB4] data-[state=open]:border-[#6F5B42]/50 transition-colors"
               >
-                <AccordionTrigger className="text-left text-sm font-medium hover:no-underline py-5 hover:text-amber-700 transition-colors">
+                <AccordionTrigger className="text-left text-sm font-medium hover:no-underline py-5 hover:text-[#6F5B42] transition-colors">
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm text-muted-foreground pb-5 leading-relaxed">
@@ -382,13 +382,13 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Waitlist / Email Form */}
-      <section className="py-20 bg-amber-50/60 border-t border-stone-200">
+      <section className="py-20 bg-[#D2D2D1]/40 border-t border-[#BEBBB4]">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <motion.div {...fadeUp}>
             <h3 className="text-2xl font-bold mb-2">{content.waitlist.h3}</h3>
             <p className="text-muted-foreground mb-6">{content.waitlist.p}</p>
             {submitted ? (
-              <p className="text-amber-800 font-medium py-3">{content.waitlist.thanks}</p>
+              <p className="text-[#6F5B42] font-medium py-3">{content.waitlist.thanks}</p>
             ) : (
               <form onSubmit={handleSubmit} className="flex gap-2">
                 <input
@@ -397,9 +397,9 @@ export function LandingPage({ content }: { content: LandingContent }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={content.waitlist.placeholder}
-                  className="flex-1 h-11 px-4 rounded-lg border border-stone-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="flex-1 h-11 px-4 rounded-lg border border-[#BEBBB4] bg-[#EAEAE8] text-sm focus:outline-none focus:ring-2 focus:ring-[#6F5B42]"
                 />
-                <Button type="submit" className="bg-amber-800 hover:bg-amber-700 text-amber-50 h-11 px-6 border-0">
+                <Button type="submit" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] h-11 px-6 border-0">
                   {content.waitlist.btn}
                 </Button>
               </form>
@@ -410,16 +410,16 @@ export function LandingPage({ content }: { content: LandingContent }) {
 
       {/* CTA Banner */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-900 via-stone-800 to-amber-900" />
-        <div className="orb w-96 h-96 bg-amber-600 top-0 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#15160A] via-[#6F5B42] to-[#15160A]" />
+        <div className="orb w-96 h-96 bg-[#6F5B42] top-0 left-1/2 -translate-x-1/2 opacity-20" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10 text-center">
           <motion.div {...fadeUp}>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">
               {content.cta.h2Line1}<br />
-              <span className="text-amber-300">{content.cta.h2Accent}</span>
+              <span className="text-[#B5A892]">{content.cta.h2Accent}</span>
             </h2>
-            <p className="text-amber-200/70 mb-10 text-lg max-w-xl mx-auto">{content.cta.p}</p>
-            <Button size="lg" className="bg-amber-500 hover:bg-amber-400 text-white border-0 h-13 px-10 text-base" asChild>
+            <p className="text-[#BEBBB4]/80 mb-10 text-lg max-w-xl mx-auto">{content.cta.p}</p>
+            <Button size="lg" className="bg-[#D2D2D1] hover:bg-white text-[#15160A] border-0 h-13 px-10 text-base" asChild>
               <Link href="#pricing">
                 {content.cta.btn}
                 <ChevronRight className="ml-1 h-4 w-4" />
@@ -430,13 +430,13 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 py-16 bg-stone-50">
+      <footer className="border-t border-[#BEBBB4] py-16 bg-[#D2D2D1]/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="flex items-center gap-2.5 mb-5">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-700 to-stone-600 flex items-center justify-center">
-                  <BookHeart className="h-4 w-4 text-amber-100" />
+                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#6F5B42] to-[#15160A] flex items-center justify-center">
+                  <BookHeart className="h-4 w-4 text-[#D2D2D1]" />
                 </div>
                 <span className="font-bold text-lg">Memory Diary</span>
               </div>
@@ -445,34 +445,34 @@ export function LandingPage({ content }: { content: LandingContent }) {
             <div>
               <h3 className="text-sm font-semibold mb-5">{content.footer.col1}</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><Link href="#features" className="hover:text-amber-700 transition-colors">{content.footer.links1[0]}</Link></li>
-                <li><Link href="#pricing" className="hover:text-amber-700 transition-colors">{content.footer.links1[1]}</Link></li>
-                <li><Link href="#faq" className="hover:text-amber-700 transition-colors">{content.footer.links1[2]}</Link></li>
+                <li><Link href="#features" className="hover:text-[#6F5B42] transition-colors">{content.footer.links1[0]}</Link></li>
+                <li><Link href="#pricing" className="hover:text-[#6F5B42] transition-colors">{content.footer.links1[1]}</Link></li>
+                <li><Link href="#faq" className="hover:text-[#6F5B42] transition-colors">{content.footer.links1[2]}</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-sm font-semibold mb-5">{content.footer.col2}</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 {content.footer.links2.map((link, i) => (
-                  <li key={i}><Link href="#" className="hover:text-amber-700 transition-colors">{link}</Link></li>
+                  <li key={i}><Link href="#" className="hover:text-[#6F5B42] transition-colors">{link}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
               <h3 className="text-sm font-semibold mb-5">{content.footer.col3}</h3>
               <div className="space-y-3">
-                <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
-                  <BookOpen className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
+                <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-[#BEBBB4] hover:border-[#6F5B42] hover:bg-[#D2D2D1]/50 transition-all text-sm group">
+                  <BookOpen className="h-4 w-4 text-muted-foreground group-hover:text-[#6F5B42] transition-colors" />
                   <span className="text-muted-foreground group-hover:text-foreground transition-colors">{content.footer.links3[0]}</span>
                 </Link>
-                <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-stone-200 hover:border-amber-400 hover:bg-amber-50 transition-all text-sm group">
-                  <Github className="h-4 w-4 text-muted-foreground group-hover:text-amber-700 transition-colors" />
+                <Link href="#" className="flex items-center gap-3 p-3 rounded-lg border border-[#BEBBB4] hover:border-[#6F5B42] hover:bg-[#D2D2D1]/50 transition-all text-sm group">
+                  <Github className="h-4 w-4 text-muted-foreground group-hover:text-[#6F5B42] transition-colors" />
                   <span className="text-muted-foreground group-hover:text-foreground transition-colors">{content.footer.links3[1]}</span>
                 </Link>
               </div>
             </div>
           </div>
-          <Separator className="bg-stone-200 mb-8" />
+          <Separator className="bg-[#BEBBB4] mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             <p>{content.footer.copyright}</p>
             <p>{content.footer.email}</p>
@@ -481,8 +481,8 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </footer>
 
       {/* Sticky mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 md:hidden z-40 p-4 bg-amber-800/95 backdrop-blur-sm border-t border-amber-700">
-        <Button className="w-full bg-amber-500 hover:bg-amber-400 text-white border-0 h-11" asChild>
+      <div className="fixed bottom-0 left-0 right-0 md:hidden z-40 p-4 bg-[#6F5B42]/95 backdrop-blur-sm border-t border-[#B5A892]">
+        <Button className="w-full bg-[#D2D2D1] hover:bg-white text-[#15160A] border-0 h-11" asChild>
           <Link href="#pricing">{content.hero.ctaPrimary}</Link>
         </Button>
       </div>
