@@ -85,7 +85,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
         <div className="absolute inset-0 bg-gradient-to-b from-[#15160A]/65 via-[#15160A]/45 to-[#15160A]/75" />
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <motion.div
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-6xl mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -93,7 +93,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-white">
               {content.hero.badge}
             </h1>
-            <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
               {content.hero.p}
             </p>
             <Button size="lg" className="bg-[#6F5B42] hover:bg-[#6F5B42]/85 text-[#D2D2D1] border-0 h-12 px-8 text-base" asChild>
