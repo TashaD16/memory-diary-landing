@@ -57,12 +57,12 @@ export const enContent: LandingContent = {
     h2Line1: "Keep everything,",
     h2Accent: "in one place",
     items: [
-      { num: "01", icon: Bot, title: "AI Avatar", desc: "Upload a few photos — the service creates an animated video avatar that moves and speaks in your loved one's voice" },
-      { num: "02", icon: Users, title: "Family Access", desc: "Share a unique link with relatives. Anyone can add memories, photos and stories — no account required" },
-      { num: "03", icon: CalendarHeart, title: "Biography", desc: "Name, birth and passing dates, hometown, education, profession — create a full biographical page" },
-      { num: "04", icon: ImagePlay, title: "Media Archive", desc: "Upload photos, videos, voice messages and documents. Everything is stored securely and accessible to the whole family" },
-      { num: "05", icon: Mic2, title: "Voice Synthesis", desc: "Upload audio recordings — ElevenLabs clones the voice. The avatar will speak in your loved one's real voice" },
-      { num: "06", icon: MessageCircleHeart, title: "AI Chatbot", desc: "Upload texts, letters, diaries — AI learns to respond as your loved one would have" },
+      { num: "01", icon: Users, title: "Family Access", desc: "Share a unique link with relatives. Anyone can add memories, photos and stories — no account required" },
+      { num: "02", icon: CalendarHeart, title: "Biography", desc: "Name, birth and passing dates, hometown, education, profession — create a full biographical page" },
+      { num: "03", icon: ImagePlay, title: "Media Archive", desc: "Upload photos, videos, voice messages and documents. Everything is stored securely and accessible to the whole family" },
+      { num: "04", icon: MessageCircleHeart, title: "AI Chatbot", desc: "Upload texts, letters, diaries — AI learns to respond as your loved one would have" },
+      { num: "05", icon: Bot, title: "AI Avatar", desc: "Upload a few photos — the service creates an animated video avatar that moves and speaks in your loved one's voice", comingSoon: true },
+      { num: "06", icon: Mic2, title: "Voice Synthesis", desc: "Upload audio recordings — ElevenLabs clones the voice. The avatar will speak in your loved one's real voice", comingSoon: true },
     ],
   },
   testimonials: {

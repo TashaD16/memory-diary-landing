@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { BookHeart, Sparkles, Star, BookOpen, Github, Check, ChevronRight } from "lucide-react";
+import { BookHeart, Sparkles, Star, BookOpen, Github, Check, ChevronRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -35,6 +35,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
   }
 
   const isRu = content.lang === "ru";
+  const comingSoonLabel = isRu ? "В разработке" : "Coming soon";
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -219,12 +220,20 @@ export function LandingPage({ content }: { content: LandingContent }) {
             {content.features.items.map((feature, i) => (
               <motion.div
                 key={i}
-                className="glass-card rounded-xl p-6 flex gap-5 group hover:border-[#6F5B42]/40 transition-all duration-300"
+                className="glass-card rounded-xl p-6 flex gap-5 group hover:border-[#6F5B42]/40 transition-all duration-300 relative"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
+                {feature.comingSoon && (
+                  <div className="absolute top-3 right-3">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#15160A] text-[#B5A892] border border-[#6F5B42]/40">
+                      <Clock className="h-2.5 w-2.5" />
+                      {comingSoonLabel}
+                    </span>
+                  </div>
+                )}
                 <div className="flex-shrink-0">
                   <div className="h-12 w-12 rounded-xl bg-[#D2D2D1] border border-[#BEBBB4] flex items-center justify-center group-hover:bg-[#BEBBB4] transition-colors">
                     <feature.icon className="h-5 w-5 text-[#6F5B42]" />

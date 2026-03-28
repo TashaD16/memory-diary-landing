@@ -13,6 +13,7 @@ export interface Feature {
   icon: LucideIcon;
   title: string;
   desc: string;
+  comingSoon?: boolean;
 }
 
 export interface Stat {
