@@ -10,7 +10,7 @@ export const enContent: LandingContent = {
     cta: "Get started free",
   },
   hero: {
-    badge: "Preserve the memory of those you love",
+    badge: "Preserve the memory of your loved ones forever",
     h1Line1: "Digital Memorial",
     h1Accent: "for those",
     h1Line3: "you love",
